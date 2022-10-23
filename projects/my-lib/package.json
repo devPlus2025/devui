@@ -1,0 +1,12 @@
+{
+  "name": "my-lib",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "primeng": "^14.1.2",
+    "tslib": "^2.3.0"
+  }
+}

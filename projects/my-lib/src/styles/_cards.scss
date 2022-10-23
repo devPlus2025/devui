@@ -1,0 +1,72 @@
+@import "variables";
+
+//style for rf-tile component
+
+.rf-title-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 88px;
+  padding: $space-xs $space-sm;
+}
+
+.rf-tile-content {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rf-tile-tile {
+  text-align: right;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+}
+
+.rf-title-subtitle {
+  text-align: right;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  align-self: end;
+}
+
+.rf-title-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .rf-title-label {
+    color: var(--color-text-darkest);
+    font-size: $ftsz-mini;
+  }
+}
+
+.rf-tile-total {
+  font-size: $ftsz-s;
+  font-weight: 600;
+  justify-content: flex-end;
+  display: flex;
+  line-height: $ftsz-s;
+}
+
+.rf-tile-when-icon {
+  flex-direction: row;
+  align-items: center;
+}
+
+.rf-tile-icon-box {
+  border-radius: $radius-btn;
+  background-color: #ffffff; //var(--color-bg-lightest);
+  display: flex;
+  justify-content: center;
+  height: $icon-xl;
+  width: $icon-xl;
+  align-items: center;
+
+  .rf-tile-icon {
+    font-size: $icon-md;
+  }
+}

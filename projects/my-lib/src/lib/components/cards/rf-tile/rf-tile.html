@@ -1,0 +1,38 @@
+<ng-container *ngIf="icon; else noIcon">
+  <div class="rf-tile-component rf-tile-when-icon" pTooltip="{{ tooltip }}">
+    <div class="rf-tile-icon-box">
+      <i class="fa-solid fa-{{icon}}"></i>
+    </div>
+    <div class="rf-tile-content">
+      <span class="rf-tile-title">{{ title }}</span>
+      <span class="rf-tile-subtitle">{{ subtitle }}</span>
+      <span class="rf-tile-total">{{ value }}</span>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #noIcon>
+  <div
+    class="rf-tile-component"
+    pTooltip="{{ tooltip }}"
+    *ngIf="values; else singleValue"
+  >
+    <span class="rf-tile-title">{{ title }}</span>
+    <span class="rf-tile-subtitle">{{ subtitle }}</span>
+    <div
+      class="rf-tile-values"
+      *ngFor="let value of values"
+      (click)="onValueClick(value.click)"
+    >
+      <span class="rf-tile-total">{{ value.value }}</span>
+      <span class="rf-tile-label">{{ value.label }}</span>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #singleValue>
+  <div class="rf-tile-component" pTooltip="{{ tooltip }}">
+    <span class="rf-tile-title">{{ subtitle }}</span>
+    <span class="rf-title-total">{{ value }}</span>
+  </div>
+</ng-template>

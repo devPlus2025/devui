@@ -1,0 +1,47 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/cards";
+
+::ng-deep lib-rf-tile {
+  border-radius: $radius-x2;
+  background-color: #ebedf2;
+  display: block;
+
+  &.rf-title-default {
+    background-color: #ffffff; // var(--color-bg-lightest);
+
+    .rf-title-icon-box {
+      background-color: #2b3140 !important; //var(--color-btn-primary)
+      color: #ffffff; //var(--color-bg-lightest);
+    }
+    .rf-title-total {
+      color: #2b3140//var(--color-btn-primary);
+    }
+  }
+
+  &.rf-title-danger {
+    background-color: var(--color-danger-lightest);
+
+    .rf-tile-icon-box,
+    .rf-tile-total {
+      color: var(--color-danger);
+    }
+  }
+
+  &.rf-tile-lighter-text {
+    .rf-tile-component {
+      .rf-tile-title,
+      .rf-tile-subtitle {
+        color: #ffffff; // var(--color-text-lightest)
+      }
+    }
+  }
+
+  &.rf-tile-darker-text {
+    .rf-tile-component {
+      .rf-tile-title,
+      .rf-tile-subtitle {
+        color: #2b3140; // var(--color-text-darkest)
+      }
+    }
+  }
+}
